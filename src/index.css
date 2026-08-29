@@ -1,0 +1,103 @@
+/* Presentation Container & Section Canvas */
+.presentation-canvas {
+  width: 100%;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0B0F19;
+}
+
+.presentation-canvas.bg-alt {
+  background: #0F172A;
+}
+
+.presentation-canvas.bg-light {
+  background: #F8FAFC;
+  color: #0F172A;
+}
+
+.presentation-canvas.bg-light h1,
+.presentation-canvas.bg-light h4,
+.presentation-canvas.bg-light p {
+  color: #0F172A;
+}
+
+.presentation-text {
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.presentation-text h4 {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--primary-400);
+  margin-bottom: 12px;
+}
+
+.presentation-text h1 {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+}
+
+.presentation-text p {
+  font-size: 16px;
+  color: var(--slate-400);
+  line-height: 1.6;
+}
+
+/* Device Showcase Rows */
+.device-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.screen-presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 380px;
+}
+
+.screen-info {
+  text-align: center;
+  max-width: 320px;
+}
+
+.screen-title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.presentation-canvas.bg-light .screen-title {
+  color: #0F172A;
+}
+
+.screen-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--slate-400);
+}
+
+.presentation-canvas.bg-light .screen-desc {
+  color: var(--slate-600);
+}

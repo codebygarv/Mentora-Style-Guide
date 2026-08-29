@@ -1,0 +1,34 @@
+.btn-mute, .btn-vol-up, .btn-vol-down, .btn-power {
+  position: absolute;
+  background: #2a2e39;
+  border-radius: 4px;
+  z-index: 20;
+}
+
+.btn-mute {
+  width: 3px;
+  height: 24px;
+  top: 105px;
+  left: -2px;
+}
+
+.btn-vol-up {
+  width: 3px;
+  height: 46px;
+  top: 145px;
+  left: -2px;
+}
+
+.btn-vol-down {
+  width: 3px;
+  height: 46px;
+  top: 205px;
+  left: -2px;
+}
+
+.btn-power {
+  width: 3px;
+  height: 64px;
+  top: 165px;
+  right: -2px;
+}

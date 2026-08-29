@@ -1,0 +1,500 @@
+.mentee-dashboard {
+  width: 100%;
+  height: 100%;
+  background: #F8FAFC;
+  display: flex;
+  flex-direction: column;
+  color: #0F172A;
+  position: relative;
+  font-family: var(--font-body);
+}
+
+.md-header {
+  padding: 50px 18px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.md-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.md-avatar-wrap {
+  position: relative;
+  width: 42px;
+  height: 42px;
+}
+
+.md-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #6366F1;
+}
+
+.md-online-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #10B981;
+  border: 2px solid #FFFFFF;
+}
+
+.md-greeting {
+  font-size: 11px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.md-username {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.2;
+}
+
+.md-header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.md-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #334155;
+  cursor: pointer;
+  position: relative;
+}
+
+.md-notif-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: #EF4444;
+  color: #FFFFFF;
+  font-size: 9px;
+  font-weight: 800;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+}
+
+.md-scroll-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 16px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Upcoming Session Card */
+.md-upcoming-card {
+  background: linear-gradient(135deg, #1E1B4B 0%, #312E81 50%, #4338CA 100%);
+  border-radius: 24px;
+  padding: 18px;
+  color: #FFFFFF;
+  box-shadow: 0 12px 28px -6px rgba(49, 46, 129, 0.4);
+}
+
+.md-uc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.md-uc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(239, 68, 68, 0.2);
+  color: #FCA5A5;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 99px;
+}
+
+.live-pulse {
+  width: 6px;
+  height: 6px;
+  background: #EF4444;
+  border-radius: 50%;
+  animation: pulse-red 1.5s infinite;
+}
+
+@keyframes pulse-red {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.md-uc-date {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+.md-uc-mentor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.md-mentor-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.md-mentor-info h4 {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.md-mentor-info p {
+  font-size: 12px;
+  color: #C7D2FE;
+  margin-bottom: 4px;
+}
+
+.md-session-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #A5B4FC;
+}
+
+.md-uc-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-join-call {
+  flex: 1;
+  background: #FFFFFF;
+  color: #312E81;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+  border: none;
+  border-radius: 14px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.btn-join-call:hover {
+  transform: scale(1.02);
+}
+
+.btn-details {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Stats Row */
+.md-stats-row {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.md-stat-card {
+  text-align: center;
+}
+
+.md-stat-num {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.md-stat-num.highlight {
+  color: #6366F1;
+}
+
+.md-stat-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #64748B;
+}
+
+.md-stat-divider {
+  width: 1px;
+  height: 28px;
+  background: #E2E8F0;
+}
+
+/* Category Pills */
+.md-categories-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.md-category-pill {
+  padding: 8px 16px;
+  border-radius: 99px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.md-category-pill.active {
+  background: #6366F1;
+  color: #FFFFFF;
+  border-color: #6366F1;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Section Header */
+.md-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 4px;
+}
+
+.md-sec-title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.md-sec-subtitle {
+  font-size: 11px;
+  color: #64748B;
+}
+
+.md-view-all {
+  background: none;
+  border: none;
+  color: #6366F1;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+}
+
+/* Mentor Recommendation Cards */
+.md-mentor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.md-card-mentor {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 14px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.md-cm-top {
+  display: flex;
+  gap: 12px;
+}
+
+.md-cm-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.md-cm-details {
+  flex: 1;
+}
+
+.md-cm-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.md-cm-name-row h4 {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.md-rating-chip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #B45309;
+}
+
+.md-cm-title {
+  font-size: 11px;
+  color: #64748B;
+  margin: 2px 0 6px;
+}
+
+.md-cm-tags {
+  display: flex;
+  gap: 6px;
+}
+
+.md-cm-tags .tag {
+  font-size: 10px;
+  font-weight: 600;
+  background: #EEF2FF;
+  color: #4F46E5;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.md-cm-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #F1F5F9;
+}
+
+.md-cm-match {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #4F46E5;
+}
+
+.md-cm-action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.md-cm-price {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.md-cm-price small {
+  font-size: 10px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.md-cm-book-btn {
+  background: #6366F1;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.md-cm-book-btn:hover {
+  background: #4F46E5;
+}
+
+/* Bottom Nav Bar */
+.md-bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #FFFFFF;
+  border-top: 1px solid #E2E8F0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 40;
+  padding-bottom: 8px;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: #94A3B8;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-item.active {
+  color: #6366F1;
+}
