@@ -1,0 +1,238 @@
+.booking-screen {
+  width: 100%;
+  height: 100%;
+  background: #F5F8FA;
+  display: flex;
+  flex-direction: column;
+  color: #0F172A;
+  position: relative;
+  font-family: var(--font-body);
+  overflow: hidden;
+}
+
+.bk-header {
+  padding: 50px 18px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-bottom: 1px solid #EDF2F7;
+  z-index: 30;
+}
+
+.bk-back-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.bk-title {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.bk-scroll-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px 16px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bk-mentor-card {
+  background: #FFFFFF;
+  border: 1px solid #EDF2F7;
+  border-radius: 18px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.bk-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.bk-mentor-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bk-mentor-name {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.bk-rate {
+  font-size: 11px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.bk-section-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bk-sec-label {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.bk-dates-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.bk-date-pill {
+  flex: 1;
+  background: #FFFFFF;
+  border: 1.5px solid #EDF2F7;
+  border-radius: 16px;
+  padding: 8px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.bk-date-pill.active {
+  background: #18181B;
+  border-color: #18181B;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bk-date-day {
+  font-size: 10px;
+  color: #64748B;
+}
+
+.bk-date-pill.active .bk-date-day {
+  color: #CBD5E1;
+}
+
+.bk-date-num {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.bk-duration-row {
+  display: flex;
+  gap: 6px;
+}
+
+.bk-dur-pill {
+  flex: 1;
+  padding: 8px 6px;
+  border-radius: 9999px;
+  background: #FFFFFF;
+  border: 1px solid #EDF2F7;
+  font-size: 11px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+}
+
+.bk-dur-pill.active {
+  background: #EBF3FE;
+  color: #1D75FE;
+  border-color: #1D75FE;
+}
+
+.bk-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.bk-slot-btn {
+  background: #FFFFFF;
+  border: 1px solid #EDF2F7;
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.bk-slot-btn.active {
+  background: #1D75FE;
+  color: #FFFFFF;
+  border-color: #1D75FE;
+  box-shadow: 0 2px 8px rgba(29, 117, 254, 0.3);
+}
+
+.bk-topic-textarea {
+  background: #FFFFFF;
+  border: 1px solid #EDF2F7;
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #0F172A;
+  outline: none;
+  font-family: var(--font-body);
+  resize: none;
+}
+
+.bk-topic-textarea:focus {
+  border-color: #1D75FE;
+}
+
+.bk-bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 18px 22px;
+  background: #FFFFFF;
+  border-top: 1px solid #EDF2F7;
+  z-index: 40;
+}
+
+.btn-bk-proceed {
+  width: 100%;
+  background: #18181B;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 13px 20px;
+  border-radius: 9999px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
