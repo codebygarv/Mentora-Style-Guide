@@ -1,0 +1,229 @@
+.avail-screen {
+  width: 100%;
+  height: 100%;
+  background: #F5F8FA;
+  display: flex;
+  flex-direction: column;
+  color: #0F172A;
+  position: relative;
+  font-family: var(--font-body);
+  overflow: hidden;
+}
+
+.avail-header {
+  padding: 50px 18px 12px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #EDF2F7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 30;
+}
+
+.avail-back-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.avail-title {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.avail-scroll-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px 16px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.avail-status-card {
+  background: #FFFFFF;
+  border: 1px solid #EDF2F7;
+  border-radius: 18px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.avail-sc-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avail-pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.avail-sc-title {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  color: #0F172A;
+  display: block;
+}
+
+.avail-sc-sub {
+  font-size: 10px;
+  color: #64748B;
+}
+
+.avail-status-pill {
+  font-size: 10px;
+  font-weight: 700;
+  background: #D1FAE5;
+  color: #059669;
+  padding: 2px 8px;
+  border-radius: 99px;
+}
+
+.avail-block {
+  background: #FFFFFF;
+  border: 1px solid #EDF2F7;
+  border-radius: 18px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.avail-block-label {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.avail-days-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.avail-day-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.avail-day-circle.active {
+  background: #1D75FE;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(29, 117, 254, 0.35);
+}
+
+.avail-days-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid #F8FAFC;
+  padding-top: 8px;
+}
+
+.avail-day-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+.avail-di-name {
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.avail-di-hours {
+  color: #64748B;
+}
+
+.avail-pref-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #F8FAFC;
+}
+
+.avail-pref-row:last-child {
+  border-bottom: none;
+}
+
+.avail-pref-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.avail-pref-info strong {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.avail-pref-info span {
+  font-size: 10px;
+  color: #64748B;
+}
+
+.avail-pref-val {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  background: #EFF6FF;
+  color: #1D75FE;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.avail-bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 18px 22px;
+  background: #FFFFFF;
+  border-top: 1px solid #EDF2F7;
+  z-index: 40;
+}
+
+.btn-avail-save {
+  width: 100%;
+  background: #18181B;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 13px 20px;
+  border-radius: 9999px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
