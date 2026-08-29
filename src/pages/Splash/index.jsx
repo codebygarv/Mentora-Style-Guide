@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles } from 'lucide-react';
+import MentoraLogo from '../../components/MentoraLogo';
 import './styles.css';
 
 const Splash = () => {
@@ -7,7 +7,7 @@ const Splash = () => {
     <div className="splash-screen">
       <div className="splash-brand-wrap">
         <div className="splash-logo-container">
-          <Sparkles size={40} className="splash-icon" />
+          <MentoraLogo size={56} />
           <div className="splash-pulse-ring"></div>
         </div>
         <h1 className="splash-title">Mentora</h1>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Sparkles, Eye, EyeOff, AlertCircle } from 'lucide-react';
+import MentoraLogo from '../../components/MentoraLogo';
+import { Eye, EyeOff, AlertCircle } from 'lucide-react';
 import './styles.css';
 
 const GoogleIcon = () => (
@@ -24,7 +25,7 @@ const SignIn = ({ hasError = false }) => {
     <div className="auth-screen no-scrollbar">
       <div className="auth-header">
         <div className="auth-brand-badge">
-          <Sparkles size={20} color="#1D75FE" />
+          <MentoraLogo size={32} />
         </div>
         <h2 className="auth-title">Welcome Back</h2>
         <p className="auth-subtitle">Sign in to manage your 1:1 sessions and mentors</p>

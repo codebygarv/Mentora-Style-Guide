@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Sparkles, AlertCircle, CheckCircle2 } from 'lucide-react';
+import MentoraLogo from '../../components/MentoraLogo';
+import { AlertCircle, CheckCircle2 } from 'lucide-react';
 import './styles.css';
 
 const SignUp = ({ hasError = false }) => {
@@ -12,7 +13,7 @@ const SignUp = ({ hasError = false }) => {
     <div className="auth-screen no-scrollbar">
       <div className="auth-header">
         <div className="auth-brand-badge">
-          <Sparkles size={20} color="#1D75FE" />
+          <MentoraLogo size={32} />
         </div>
         <h2 className="auth-title">Create Account</h2>
         <p className="auth-subtitle">Join Mentora to accelerate your career growth</p>
