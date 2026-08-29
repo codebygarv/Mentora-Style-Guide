@@ -4,10 +4,10 @@
   left: 0;
   right: 0;
   height: 64px;
-  background: rgba(11, 15, 25, 0.85);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--slate-200);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -28,19 +28,7 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: #FFFFFF;
-}
-
-.doc-brand-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 10px;
-  background: var(--brand-gradient);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  color: var(--slate-900);
 }
 
 .doc-brand-name {
@@ -48,15 +36,15 @@
   font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.01em;
-  color: #FFFFFF;
+  color: var(--slate-900);
 }
 
 .doc-badge {
   font-size: 11px;
   font-weight: 600;
-  background: rgba(99, 102, 241, 0.15);
-  color: var(--primary-300);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: var(--badge-blue-bg);
+  color: var(--badge-blue-text);
+  border: 1px solid var(--primary-200);
   padding: 2px 8px;
   border-radius: 99px;
 }
@@ -70,12 +58,12 @@
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
-  color: var(--slate-400);
+  color: var(--slate-500);
   transition: color 0.2s ease;
 }
 
 .doc-nav a:hover {
-  color: #FFFFFF;
+  color: var(--slate-900);
 }
 
 .doc-github-btn {
@@ -83,10 +71,10 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--slate-50);
+  border: 1px solid var(--slate-200);
   border-radius: 99px;
-  color: #FFFFFF;
+  color: var(--slate-900);
   text-decoration: none;
   font-size: 13px;
   font-weight: 600;
@@ -94,15 +82,15 @@
 }
 
 .doc-github-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.25);
+  background: var(--slate-100);
+  border-color: var(--slate-300);
   transform: translateY(-1px);
 }
 
 .doc-hero {
   padding: 130px 24px 70px;
-  background: radial-gradient(circle at top center, rgba(99, 102, 241, 0.12) 0%, rgba(11, 15, 25, 0) 70%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: radial-gradient(circle at top center, #DBEAFE 0%, rgba(248, 250, 252, 0) 70%);
+  border-bottom: 1px solid var(--slate-200);
 }
 
 .doc-wrap {
@@ -119,10 +107,10 @@
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
-  background: rgba(99, 102, 241, 0.12);
-  border: 1px solid rgba(99, 102, 241, 0.25);
+  background: var(--badge-blue-bg);
+  border: 1px solid var(--primary-200);
   border-radius: 99px;
-  color: var(--primary-300);
+  color: var(--badge-blue-text);
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -134,17 +122,14 @@
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: #FFFFFF;
+  color: var(--slate-900);
   margin-bottom: 20px;
-  background: linear-gradient(180deg, #FFFFFF 30%, #CBD5E1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .doc-lede {
   font-size: 18px;
   line-height: 1.6;
-  color: var(--slate-400);
+  color: var(--slate-500);
   max-width: 720px;
   margin-bottom: 36px;
 }
@@ -161,15 +146,16 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: rgba(30, 41, 59, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #FFFFFF;
+  border: 1px solid var(--slate-200);
   border-radius: 12px;
   font-size: 13px;
-  color: var(--slate-300);
+  color: var(--slate-600);
+  box-shadow: var(--shadow-1);
 }
 
 .stat-badge svg {
-  color: var(--primary-400);
+  color: var(--primary-500);
 }
 
 @media (max-width: 768px) {

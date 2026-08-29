@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Search, SlidersHorizontal, Star, Briefcase, BarChart3, Code, ArrowRight, Home, Calendar, MessageSquare, User, Clock } from 'lucide-react';
+import { Search, SlidersHorizontal, Star, Home, Calendar, MessageSquare, User, Clock } from 'lucide-react';
+import Avatar from '../../components/Avatar';
+import Pill from '../../components/Pill';
 import './styles.css';
 
 const SearchScreen = () => {
@@ -19,7 +21,6 @@ const SearchScreen = () => {
       rate: '$16',
       exp: '5 Years',
       field: 'Marketing',
-      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
       available: 'Today 7:00 PM'
     },
     {
@@ -32,7 +33,6 @@ const SearchScreen = () => {
       rate: '$20',
       exp: '8 Years',
       field: 'Investing',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
       available: 'Tomorrow 10:00 AM'
     },
     {
@@ -45,7 +45,6 @@ const SearchScreen = () => {
       rate: '$18',
       exp: '7 Years',
       field: 'Full-Stack',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
       available: 'Today 8:30 PM'
     }
   ];
@@ -57,9 +56,9 @@ const SearchScreen = () => {
         <h2 className="srch-title">Explore Mentors</h2>
         <div className="srch-input-wrapper">
           <Search size={16} className="srch-icon" />
-          <input 
-            type="text" 
-            className="srch-input" 
+          <input
+            type="text"
+            className="srch-input"
             placeholder="Search by skill, name or company..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -74,13 +73,14 @@ const SearchScreen = () => {
         {/* 2. Horizontal Skill Tags */}
         <div className="srch-tags-row no-scrollbar">
           {tags.map((t) => (
-            <button 
-              key={t} 
-              className={`srch-tag-pill ${selectedTag === t ? 'active' : ''}`}
+            <Pill
+              key={t}
+              variant="toggle"
+              active={selectedTag === t}
               onClick={() => setSelectedTag(t)}
             >
               {t}
-            </button>
+            </Pill>
           ))}
         </div>
 
@@ -88,8 +88,8 @@ const SearchScreen = () => {
         <div className="srch-applied-bar">
           <span className="srch-count">Showing 3 Mentors</span>
           <div className="srch-filter-chips">
-            <span className="srch-active-chip">Under $25</span>
-            <span className="srch-active-chip">⭐ 4.8+</span>
+            <Pill variant="tag">Under $25</Pill>
+            <Pill variant="rating" icon={<Star size={11} fill="#F59E0B" color="#F59E0B" />}>4.8+</Pill>
           </div>
         </div>
 
@@ -98,19 +98,18 @@ const SearchScreen = () => {
           {results.map((mentor) => (
             <div key={mentor.id} className="srch-mentor-card">
               <div className="srch-mc-top">
-                <img src={mentor.avatar} alt={mentor.name} className="srch-mc-avatar" />
+                <Avatar name={mentor.name} size={44} shape="rounded" />
                 <div className="srch-mc-info">
                   <div className="srch-mc-name-row">
                     <h4>{mentor.name}</h4>
-                    <div className="srch-rating-chip">
-                      <Star size={11} fill="#F59E0B" color="#F59E0B" />
-                      <span>{mentor.rating}</span>
-                    </div>
+                    <Pill variant="rating" icon={<Star size={11} fill="#F59E0B" color="#F59E0B" />}>
+                      {mentor.rating}
+                    </Pill>
                   </div>
                   <p className="srch-mc-sub">{mentor.title} · {mentor.company}</p>
                   <div className="srch-badge-row">
-                    <span className="field-tag-badge">{mentor.field}</span>
-                    <span className="srch-exp-tag">{mentor.exp}</span>
+                    <Pill variant="field">{mentor.field}</Pill>
+                    <Pill variant="tag">{mentor.exp}</Pill>
                   </div>
                 </div>
               </div>
@@ -149,11 +148,7 @@ const SearchScreen = () => {
           <span>Chat</span>
         </button>
         <button className="nav-tab-btn">
-          <img 
-            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&auto=format&fit=crop&q=80" 
-            alt="Profile" 
-            className="nav-avatar-icon" 
-          />
+          <User size={20} />
           <span>Profile</span>
         </button>
       </nav>

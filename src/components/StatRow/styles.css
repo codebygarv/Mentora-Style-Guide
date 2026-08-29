@@ -1,0 +1,81 @@
+.stat-row {
+  display: flex;
+  width: 100%;
+}
+
+/* "Divided" layout — inline stats separated by hairlines, no per-item card */
+.stat-row-divided {
+  align-items: center;
+  justify-content: space-around;
+  gap: 12px;
+  background: #FFFFFF;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  box-shadow: var(--shadow-1);
+}
+
+.stat-row-divided .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 28px;
+  background: var(--slate-200);
+  flex-shrink: 0;
+}
+
+/* "Boxed" layout — each stat is its own bordered card */
+.stat-row-boxed {
+  gap: 8px;
+}
+
+.stat-box {
+  flex: 1;
+  background: #FFFFFF;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-1);
+}
+
+.stat-box-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.stat-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--slate-900);
+}
+
+.stat-row-divided .stat-value {
+  font-size: 18px;
+}
+
+.stat-value.highlight {
+  color: var(--primary-500);
+}
+
+.stat-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--slate-500);
+  margin-top: 2px;
+}

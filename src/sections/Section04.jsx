@@ -18,7 +18,7 @@ const ScreenPresentation = ({ title, description, children, theme = "light" }) =
 );
 
 const Section04 = () => (
-  <div className="presentation-canvas bg-dark" id="section-04">
+  <div className="presentation-canvas" id="section-04">
     <div className="presentation-text centered-header">
       <h4>SECTION 04</h4>
       <h1>Live Mentorship & Mentor Tools</h1>

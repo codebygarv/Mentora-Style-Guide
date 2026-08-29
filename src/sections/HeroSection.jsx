@@ -2,7 +2,7 @@ import React from 'react';
 import MentoraLogo from '../components/MentoraLogo';
 import HomeScreen from '../pages/HomeScreen';
 import MentorProfile from '../pages/MentorProfile';
-import { Sparkles, Star, ShieldCheck, Video, ArrowRight, Layers, Clock, Zap } from 'lucide-react';
+import { Star, Video, ArrowRight, Layers, Zap } from 'lucide-react';
 import { Wifi, Battery } from 'lucide-react';
 import './HeroSection.css';
 
@@ -18,16 +18,9 @@ const CellularIcon = () => (
 const HeroSection = () => {
   return (
     <section className="hero-command-section" id="hero-section">
-      <div className="hero-ambient-glow glow-top-left"></div>
-      <div className="hero-ambient-glow glow-center-right"></div>
-
       <div className="hero-container">
         {/* Left Column: Clear High-Contrast Typography & Metrics */}
         <div className="hero-copy-column">
-          <div className="hero-badge-pill">
-            <MentoraLogo size={16} />
-            <span>MENTORA APP DESIGN SYSTEM v1.0</span>
-          </div>
 
           <h1 className="hero-main-heading">
             The Professional<br />
@@ -163,26 +156,6 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-
-            {/* Floating Glassmorphic Chips */}
-            <div className="hero-floating-chip chip-top-right">
-              <div className="chip-icon-amber">
-                <Star size={13} fill="#F59E0B" color="#F59E0B" />
-              </div>
-              <div className="chip-text">
-                <span className="chip-title">4.9 Ratings</span>
-                <span className="chip-sub">120+ Verified Sessions</span>
-              </div>
-            </div>
-
-            <div className="hero-floating-chip chip-bottom-left">
-              <div className="chip-live-dot"></div>
-              <div className="chip-text">
-                <span className="chip-title">Next Session: 7:30 PM</span>
-                <span className="chip-sub">Growth Marketing · Stella</span>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>

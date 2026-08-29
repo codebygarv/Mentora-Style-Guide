@@ -1,0 +1,59 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  white-space: nowrap;
+  border: none;
+  cursor: default;
+}
+
+.pill-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Field/category tag — e.g. "Marketing" (real signal, not decoration) */
+.pill-field {
+  padding: 4px 10px;
+  background: var(--badge-blue-bg);
+  color: var(--badge-blue-text);
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+}
+
+/* Plain skill/experience tag — small neutral rectangular label */
+.pill-tag {
+  padding: 3px 9px;
+  background: var(--slate-100);
+  color: var(--slate-600);
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Interactive filter/toggle chip */
+.pill-toggle {
+  padding: 8px 16px;
+  background: #FFFFFF;
+  color: var(--slate-600);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill-toggle.active {
+  background: var(--brand-obsidian);
+  color: #FFFFFF;
+  border-color: var(--brand-obsidian);
+  box-shadow: var(--shadow-2);
+}
+
+/* Rating chip — icon + number, no background surface */
+.pill-rating {
+  color: #B45309;
+  font-size: 11px;
+}

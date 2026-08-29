@@ -1,0 +1,46 @@
+.avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.avatar-mark {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  user-select: none;
+}
+
+.avatar-circle .avatar-mark {
+  border-radius: 50%;
+}
+
+.avatar-rounded .avatar-mark {
+  border-radius: var(--radius-md);
+}
+
+.avatar-status-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 28%;
+  height: 28%;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+}
+
+.avatar-status-online {
+  background: var(--accent-emerald);
+}
+
+.avatar-status-offline {
+  background: var(--slate-400);
+}
