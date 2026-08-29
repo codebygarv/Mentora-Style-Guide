@@ -27,9 +27,10 @@ const DocHeader = () => {
             <a href="#section-01">Tokens</a>
             <a href="#section-02">Auth</a>
             <a href="#section-03">Discovery</a>
-            <a href="#section-04">Live Mentorship</a>
-            <a href="#section-05">Tab Suite</a>
-            <a href="#section-06">Host & Extended</a>
+            <a href="#section-04">Live</a>
+            <a href="#section-05">Tabs</a>
+            <a href="#section-06">Mentor Tools</a>
+            <a href="#section-07">Roadmaps & Badges</a>
           </nav>
 
           <a 

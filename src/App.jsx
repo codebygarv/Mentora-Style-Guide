@@ -7,6 +7,7 @@ import Section03 from './sections/Section03';
 import Section04 from './sections/Section04';
 import Section05 from './sections/Section05';
 import Section06 from './sections/Section06';
+import Section07 from './sections/Section07';
 
 import './global.css';
 import './index.css';
@@ -23,6 +24,7 @@ function App() {
       <Section04 />
       <Section05 />
       <Section06 />
+      <Section07 />
     </div>
   );
 }
