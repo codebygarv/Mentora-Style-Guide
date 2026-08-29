@@ -57,7 +57,7 @@
 }
 
 .device-mockup[data-theme="dark"] .sg-brand-chip {
-  background: rgba(99, 102, 241, 0.15);
+  background: rgba(29, 117, 254, 0.15);
   color: var(--primary-300);
 }
 
@@ -108,15 +108,15 @@
 }
 
 .badge-verified {
-  background: #EEF2FF;
-  color: #4F46E5;
-  border: 1px solid #C7D2FE;
+  background: var(--badge-blue-bg);
+  color: var(--badge-blue-text);
+  border: 1px solid var(--primary-200);
 }
 
 .device-mockup[data-theme="dark"] .badge-verified {
-  background: rgba(79, 70, 229, 0.2);
-  color: #A5B4FC;
-  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(29, 117, 254, 0.2);
+  color: var(--primary-300);
+  border-color: rgba(29, 117, 254, 0.4);
 }
 
 .badge-rating {
@@ -191,7 +191,7 @@
 
 .sg-input-box.focused {
   border-color: var(--primary-500);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 0 0 3px rgba(29, 117, 254, 0.15);
 }
 
 .sg-input-box.error {

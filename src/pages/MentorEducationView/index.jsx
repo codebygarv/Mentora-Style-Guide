@@ -1,28 +1,24 @@
 import React from 'react';
-import { ArrowLeft, Clock, Star, Calendar, GraduationCap, MessageSquare, Briefcase, Award, Globe } from 'lucide-react';
+import { Clock, Star, Calendar, GraduationCap, MessageSquare, Briefcase } from 'lucide-react';
+import ScreenHeader from '../../components/ScreenHeader';
+import Avatar from '../../components/Avatar';
+import Pill from '../../components/Pill';
+import StatRow from '../../components/StatRow';
+import SegmentedTabs from '../../components/SegmentedTabs';
+import BottomActionBar from '../../components/BottomActionBar';
 import './styles.css';
 
 const MentorEducationView = () => {
   return (
     <div className="mentor-profile-screen no-scrollbar">
       {/* 1. Top Bar */}
-      <div className="mp-top-nav">
-        <button className="mp-nav-circle-btn" aria-label="Back">
-          <ArrowLeft size={18} color="#0F172A" />
-        </button>
-        <button className="mp-nav-circle-btn" aria-label="Details">
-          <Clock size={18} color="#0F172A" />
-        </button>
-      </div>
+      <ScreenHeader rightAction={<Clock size={18} color="#0F172A" />} />
 
       <div className="mp-scrollable-body no-scrollbar">
         {/* 2. Mentor Hero Card */}
         <div className="mp-hero-card">
           <div className="mp-hero-info">
-            <div className="field-tag-badge">
-              <Briefcase size={12} className="field-icon" />
-              <span>Marketing</span>
-            </div>
+            <Pill variant="field" icon={<Briefcase size={12} />}>Marketing</Pill>
 
             <h1 className="mp-mentor-name">
               Stella<br />Fernandez
@@ -33,55 +29,30 @@ const MentorEducationView = () => {
               <span className="mp-price-unit">/session</span>
             </div>
 
-            <div className="mp-stats-container">
-              <div className="mp-stat-box">
-                <div className="mp-stat-header">
-                  <span className="mp-stat-value">5 Years</span>
-                  <div className="mp-stat-icon-wrap red">
-                    <Clock size={11} color="#EF4444" />
-                  </div>
-                </div>
-                <span className="mp-stat-label">Experience</span>
-              </div>
-
-              <div className="mp-stat-box">
-                <div className="mp-stat-header">
-                  <span className="mp-stat-value">4.9</span>
-                  <div className="mp-stat-icon-wrap amber">
-                    <Star size={11} fill="#F59E0B" color="#F59E0B" />
-                  </div>
-                </div>
-                <span className="mp-stat-label">Ratings</span>
-              </div>
-            </div>
+            <StatRow
+              layout="boxed"
+              items={[
+                { value: '5 Years', label: 'Experience', icon: <Clock size={11} color="#EF4444" /> },
+                { value: '4.9', label: 'Ratings', icon: <Star size={11} fill="#F59E0B" color="#F59E0B" /> },
+              ]}
+            />
           </div>
 
           <div className="mp-hero-photo-wrap">
-            <img 
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=450&auto=format&fit=crop&q=80" 
-              alt="Stella Fernandez" 
-              className="mp-hero-photo" 
-            />
+            <Avatar name="Stella Fernandez" size={132} shape="rounded" />
           </div>
         </div>
 
         {/* 3. Segmented Navigation Tabs (Education Active) */}
-        <div className="mp-segmented-tabs">
-          <button className="mp-seg-tab">
-            <Calendar size={15} />
-            <span>Schedule</span>
-          </button>
-
-          <button className="mp-seg-tab active">
-            <GraduationCap size={15} />
-            <span>Education</span>
-          </button>
-
-          <button className="mp-seg-tab">
-            <Star size={15} />
-            <span>Reviews</span>
-          </button>
-        </div>
+        <SegmentedTabs
+          tabs={[
+            { key: 'Schedule', label: 'Schedule', icon: <Calendar size={15} /> },
+            { key: 'Education', label: 'Education', icon: <GraduationCap size={15} /> },
+            { key: 'Reviews', label: 'Reviews', icon: <Star size={15} /> },
+          ]}
+          activeKey="Education"
+          onChange={() => {}}
+        />
 
         {/* 4. Experience & Education Cards */}
         <div className="mpe-body-stack">
@@ -138,14 +109,10 @@ const MentorEducationView = () => {
       </div>
 
       {/* 5. Fixed Bottom CTA */}
-      <div className="mp-bottom-cta-bar">
-        <button className="btn-mp-book-now">
-          Book Now
-        </button>
-        <button className="btn-mp-chat-float" aria-label="Send Message">
-          <MessageSquare size={20} color="#FFFFFF" />
-        </button>
-      </div>
+      <BottomActionBar
+        primary={{ label: 'Book Now' }}
+        secondary={{ icon: <MessageSquare size={20} color="#FFFFFF" />, ariaLabel: 'Send Message' }}
+      />
     </div>
   );
 };

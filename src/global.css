@@ -47,6 +47,17 @@
   --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-editorial: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Elevation Scale — replaces one hardcoded shadow value copy-pasted across the app */
+  --shadow-1: 0 1px 2px rgba(15, 23, 42, 0.04);   /* resting: cards, tags */
+  --shadow-2: 0 4px 16px rgba(15, 23, 42, 0.06);  /* raised: nav bars, stat rows */
+  --shadow-3: 0 12px 32px rgba(15, 23, 42, 0.10); /* overlay: sheets, active bars */
+
+  /* Radius Scale — a second radius language besides full-pill/circle */
+  --radius-sm: 10px;     /* inline tags, small icon wraps */
+  --radius-md: 16px;     /* cards, review cards, hero photo frames */
+  --radius-lg: 20px;     /* large content cards, sheets */
+  --radius-pill: 9999px; /* RESERVED: toggles, tab switchers, primary CTAs only */
 }
 
 /* Device Themes */

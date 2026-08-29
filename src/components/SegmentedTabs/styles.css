@@ -1,0 +1,34 @@
+.segmented-tabs {
+  background: #FFFFFF;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-pill);
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  box-shadow: var(--shadow-1);
+}
+
+.segmented-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: transparent;
+  color: var(--slate-500);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.segmented-tab.active {
+  background: var(--brand-obsidian);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-2);
+}

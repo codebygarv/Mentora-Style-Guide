@@ -1,0 +1,52 @@
+.bottom-action-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 14px 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(to top, rgba(248, 250, 252, 1) 70%, rgba(248, 250, 252, 0) 100%);
+  z-index: 50;
+}
+
+.btn-bottom-primary {
+  flex: 1;
+  background: var(--brand-obsidian);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 24px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-3);
+  transition: all 0.2s ease;
+}
+
+.btn-bottom-primary:hover {
+  background: #27272A;
+  transform: translateY(-1px);
+}
+
+.btn-bottom-secondary {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--primary-500);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(29, 117, 254, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.btn-bottom-secondary:hover {
+  background: #1967DE;
+  transform: scale(1.06);
+}

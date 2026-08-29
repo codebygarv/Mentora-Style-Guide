@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Search, Bell, Sparkles, Video, Calendar, ArrowRight, Star, ChevronRight, Home, Compass, MessageSquare, User, BookOpen } from 'lucide-react';
+import Avatar from '../../components/Avatar';
+import Pill from '../../components/Pill';
+import StatRow from '../../components/StatRow';
+import StatusBadge from '../../components/StatusBadge';
 import './styles.css';
 
 const MenteeDashboard = () => {
@@ -12,10 +16,7 @@ const MenteeDashboard = () => {
       {/* 1. Header Bar */}
       <div className="md-header">
         <div className="md-user-info">
-          <div className="md-avatar-wrap">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80" alt="User" className="md-avatar" />
-            <span className="md-online-dot"></span>
-          </div>
+          <Avatar name="Garv Sharma" size={42} shape="circle" status="online" />
           <div>
             <span className="md-greeting">Good Morning 👋</span>
             <h3 className="md-username">Garv Sharma</h3>
@@ -37,19 +38,12 @@ const MenteeDashboard = () => {
         {/* 2. Upcoming Session Card */}
         <div className="md-upcoming-card">
           <div className="md-uc-top">
-            <span className="md-uc-badge">
-              <span className="live-pulse"></span>
-              STARTS IN 45 MIN
-            </span>
+            <StatusBadge label="Starts in 45 min" tone="live" />
             <span className="md-uc-date">Today · 7:30 PM</span>
           </div>
 
           <div className="md-uc-mentor">
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80" 
-              alt="Rahul Sharma" 
-              className="md-mentor-photo" 
-            />
+            <Avatar name="Rahul Sharma" size={48} shape="rounded" />
             <div className="md-mentor-info">
               <h4>Rahul Sharma</h4>
               <p>Senior Staff Engineer @ Stripe</p>
@@ -71,34 +65,27 @@ const MenteeDashboard = () => {
           </div>
         </div>
 
-        {/* 3. Progress Stats Pill Row */}
-        <div className="md-stats-row">
-          <div className="md-stat-card">
-            <div className="md-stat-num">8</div>
-            <div className="md-stat-label">Sessions Done</div>
-          </div>
-          <div className="md-stat-divider"></div>
-          <div className="md-stat-card">
-            <div className="md-stat-num">12</div>
-            <div className="md-stat-label">Goals Met</div>
-          </div>
-          <div className="md-stat-divider"></div>
-          <div className="md-stat-card">
-            <div className="md-stat-num highlight">96%</div>
-            <div className="md-stat-label">Match Avg</div>
-          </div>
-        </div>
+        {/* 3. Progress Stats Row */}
+        <StatRow
+          layout="divided"
+          items={[
+            { value: '8', label: 'Sessions Done' },
+            { value: '12', label: 'Goals Met' },
+            { value: '96%', label: 'Match Avg', highlight: true },
+          ]}
+        />
 
         {/* 4. Category Pills Filter */}
         <div className="md-categories-scroll no-scrollbar">
           {categories.map((cat) => (
-            <button 
-              key={cat} 
-              className={`md-category-pill ${activeCategory === cat ? 'active' : ''}`}
+            <Pill
+              key={cat}
+              variant="toggle"
+              active={activeCategory === cat}
               onClick={() => setActiveCategory(cat)}
             >
               {cat}
-            </button>
+            </Pill>
           ))}
         </div>
 
@@ -118,30 +105,25 @@ const MenteeDashboard = () => {
           {/* Mentor 1 */}
           <div className="md-card-mentor">
             <div className="md-cm-top">
-              <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80" 
-                alt="Priya Sharma" 
-                className="md-cm-avatar" 
-              />
+              <Avatar name="Priya Sharma" size={48} shape="rounded" />
               <div className="md-cm-details">
                 <div className="md-cm-name-row">
                   <h4>Priya Sharma</h4>
-                  <div className="md-rating-chip">
-                    <Star size={12} fill="#F59E0B" color="#F59E0B" />
-                    <span>4.9 (142)</span>
-                  </div>
+                  <Pill variant="rating" icon={<Star size={12} fill="#F59E0B" color="#F59E0B" />}>
+                    4.9 (142)
+                  </Pill>
                 </div>
                 <p className="md-cm-title">Tech Lead @ Microsoft</p>
                 <div className="md-cm-tags">
-                  <span className="tag">Full-Stack</span>
-                  <span className="tag">TypeScript</span>
+                  <Pill variant="tag">Full-Stack</Pill>
+                  <Pill variant="tag">TypeScript</Pill>
                 </div>
               </div>
             </div>
 
             <div className="md-cm-bottom">
               <div className="md-cm-match">
-                <Sparkles size={13} color="#6366F1" />
+                <Sparkles size={13} color="#1D75FE" />
                 <span>96% Goal Match</span>
               </div>
               <div className="md-cm-action">
@@ -154,30 +136,25 @@ const MenteeDashboard = () => {
           {/* Mentor 2 */}
           <div className="md-card-mentor">
             <div className="md-cm-top">
-              <img 
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80" 
-                alt="Arjun Mehta" 
-                className="md-cm-avatar" 
-              />
+              <Avatar name="Arjun Mehta" size={48} shape="rounded" />
               <div className="md-cm-details">
                 <div className="md-cm-name-row">
                   <h4>Arjun Mehta</h4>
-                  <div className="md-rating-chip">
-                    <Star size={12} fill="#F59E0B" color="#F59E0B" />
-                    <span>5.0 (98)</span>
-                  </div>
+                  <Pill variant="rating" icon={<Star size={12} fill="#F59E0B" color="#F59E0B" />}>
+                    5.0 (98)
+                  </Pill>
                 </div>
                 <p className="md-cm-title">AI Engineer @ Uber</p>
                 <div className="md-cm-tags">
-                  <span className="tag">Python</span>
-                  <span className="tag">MLOps</span>
+                  <Pill variant="tag">Python</Pill>
+                  <Pill variant="tag">MLOps</Pill>
                 </div>
               </div>
             </div>
 
             <div className="md-cm-bottom">
               <div className="md-cm-match">
-                <Sparkles size={13} color="#6366F1" />
+                <Sparkles size={13} color="#1D75FE" />
                 <span>92% Goal Match</span>
               </div>
               <div className="md-cm-action">

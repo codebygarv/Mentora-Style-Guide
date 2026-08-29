@@ -87,24 +87,6 @@
   padding-bottom: 2px;
 }
 
-.srch-tag-pill {
-  padding: 6px 14px;
-  border-radius: 9999px;
-  background: #FFFFFF;
-  border: 1px solid #EDF2F7;
-  font-size: 11px;
-  font-weight: 600;
-  color: #64748B;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.srch-tag-pill.active {
-  background: #18181B;
-  color: #FFFFFF;
-  border-color: #18181B;
-}
-
 .srch-applied-bar {
   display: flex;
   justify-content: space-between;
@@ -120,15 +102,6 @@
 .srch-filter-chips {
   display: flex;
   gap: 6px;
-}
-
-.srch-active-chip {
-  font-size: 10px;
-  font-weight: 600;
-  background: #EFF6FF;
-  color: #1D75FE;
-  padding: 2px 8px;
-  border-radius: 99px;
 }
 
 .srch-results-list {
@@ -153,13 +126,6 @@
   gap: 12px;
 }
 
-.srch-mc-avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  object-fit: cover;
-}
-
 .srch-mc-info {
   flex: 1;
 }
@@ -177,15 +143,6 @@
   color: #0F172A;
 }
 
-.srch-rating-chip {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  font-size: 11px;
-  font-weight: 700;
-  color: #B45309;
-}
-
 .srch-mc-sub {
   font-size: 11px;
   color: #64748B;
@@ -196,15 +153,6 @@
   display: flex;
   gap: 6px;
   align-items: center;
-}
-
-.srch-exp-tag {
-  font-size: 10px;
-  color: #64748B;
-  background: #F1F5F9;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-weight: 500;
 }
 
 .srch-mc-bottom {

@@ -1,6 +1,8 @@
 import React from 'react';
-import { ArrowLeft, MoreHorizontal, Sparkles, Star, ShieldCheck, CheckCircle2, AlertCircle, Clock } from 'lucide-react';
+import { ArrowLeft, MoreHorizontal, Sparkles, Star, ShieldCheck, CheckCircle2, AlertCircle, Clock, Briefcase, DollarSign, BarChart3 } from 'lucide-react';
 import ColorBox from '../../components/ColorBox';
+import Pill from '../../components/Pill';
+import StatusBadge from '../../components/StatusBadge';
 import './styles.css';
 
 const StyleGuidePhone = ({ theme, title = "Design System" }) => (
@@ -79,26 +81,16 @@ const StyleGuidePhone = ({ theme, title = "Design System" }) => (
           <section className="sg-section">
             <h2 className="sg-section-title">Field Tags & Status Badges</h2>
             <div className="badges-flex">
-              <div className="badge-field-tag">
-                <span style={{ fontSize: '10px' }}>💼</span>
-                <span>Marketing</span>
-              </div>
-              <div className="badge-field-tag">
-                <span style={{ fontSize: '10px' }}>💲</span>
-                <span>Finance</span>
-              </div>
-              <div className="badge-field-tag">
-                <span style={{ fontSize: '10px' }}>📊</span>
-                <span>Investing</span>
-              </div>
-              <div className="sg-badge badge-rating">
-                <Star size={12} fill="#F59E0B" color="#F59E0B" />
-                <span>4.9 Ratings</span>
-              </div>
-              <div className="sg-badge badge-exp">
-                <Clock size={12} color="#EF4444" />
-                <span>5 Years Experience</span>
-              </div>
+              <Pill variant="field" icon={<Briefcase size={12} />}>Marketing</Pill>
+              <Pill variant="field" icon={<DollarSign size={12} />}>Finance</Pill>
+              <Pill variant="field" icon={<BarChart3 size={12} />}>Investing</Pill>
+              <Pill variant="rating" icon={<Star size={12} fill="#F59E0B" color="#F59E0B" />}>4.9 Ratings</Pill>
+              <Pill variant="rating" icon={<Clock size={12} color="#EF4444" />}>5 Years Experience</Pill>
+            </div>
+            <div className="badges-flex" style={{ marginTop: '10px' }}>
+              <StatusBadge label="Live Now" tone="live" />
+              <StatusBadge label="Online" tone="online" />
+              <StatusBadge label="Scheduled" tone="scheduled" />
             </div>
           </section>
 

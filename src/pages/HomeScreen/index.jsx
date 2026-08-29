@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Bell, Briefcase, DollarSign, BarChart3, Home, Search, Calendar, MessageSquare, ChevronRight } from 'lucide-react';
+import { Bell, Briefcase, DollarSign, BarChart3, Home, Search, Calendar, MessageSquare, User, Zap } from 'lucide-react';
+import Avatar from '../../components/Avatar';
+import Pill from '../../components/Pill';
 import './styles.css';
 
 const HomeScreen = () => {
@@ -13,11 +15,7 @@ const HomeScreen = () => {
       {/* 1. Header Bar */}
       <header className="home-header">
         <div className="home-user-profile">
-          <img 
-            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&auto=format&fit=crop&q=80" 
-            alt="Sakura Hime" 
-            className="home-user-avatar" 
-          />
+          <Avatar name="Sakura Hime" size={44} shape="circle" />
           <div className="home-user-text">
             <span className="home-welcome-sub">Hi, Welcome Back!</span>
             <h2 className="home-user-name">Sakura Hime</h2>
@@ -34,20 +32,13 @@ const HomeScreen = () => {
         <div className="pro-banner-card">
           <div className="pro-banner-content">
             <div className="pro-rocket-badge">
-              <span className="pro-rocket-emoji">🚀</span>
+              <Zap size={16} color="#1D75FE" />
             </div>
             <h3 className="pro-banner-title">Upgrade to Pro</h3>
             <p className="pro-banner-desc">Get more out of your mentoring journey.</p>
             <button className="btn-pro-try">
               Try Now
             </button>
-          </div>
-          <div className="pro-banner-img-wrap">
-            <img 
-              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=260&auto=format&fit=crop&q=80" 
-              alt="Mentors Pro" 
-              className="pro-mentors-img" 
-            />
           </div>
         </div>
 
@@ -62,28 +53,19 @@ const HomeScreen = () => {
         <div className="field-cards-scroll no-scrollbar">
           {/* Card 1: Marketing */}
           <div className="field-card">
-            <div className="field-tag-badge">
-              <Briefcase size={12} className="field-icon" />
-              <span>Marketing</span>
-            </div>
+            <Pill variant="field" icon={<Briefcase size={12} />}>Marketing</Pill>
             <span className="field-mentors-count">48 Mentors available</span>
           </div>
 
           {/* Card 2: Finance */}
           <div className="field-card">
-            <div className="field-tag-badge">
-              <DollarSign size={12} className="field-icon" />
-              <span>Finance</span>
-            </div>
+            <Pill variant="field" icon={<DollarSign size={12} />}>Finance</Pill>
             <span className="field-mentors-count">48 Mentors available</span>
           </div>
 
           {/* Card 3: Investing */}
           <div className="field-card">
-            <div className="field-tag-badge">
-              <BarChart3 size={12} className="field-icon" />
-              <span>Investing</span>
-            </div>
+            <Pill variant="field" icon={<BarChart3 size={12} />}>Investing</Pill>
             <span className="field-mentors-count">48 Mentors available</span>
           </div>
         </div>
@@ -91,13 +73,14 @@ const HomeScreen = () => {
         {/* 5. Filter Chips */}
         <div className="filter-chips-row no-scrollbar">
           {filters.map((f) => (
-            <button
+            <Pill
               key={f}
-              className={`filter-chip ${activeFilter === f ? 'active' : ''}`}
+              variant="toggle"
+              active={activeFilter === f}
               onClick={() => setActiveFilter(f)}
             >
               {f}
-            </button>
+            </Pill>
           ))}
         </div>
 
@@ -106,10 +89,7 @@ const HomeScreen = () => {
           {/* Mentor Card 1: Stella Fernandez */}
           <div className="mentor-showcase-card">
             <div className="msc-details">
-              <div className="field-tag-badge">
-                <Briefcase size={11} className="field-icon" />
-                <span>Marketing</span>
-              </div>
+              <Pill variant="field" icon={<Briefcase size={11} />}>Marketing</Pill>
               <h4 className="msc-name">Stella<br />Fernandez</h4>
               <div className="msc-price-row">
                 <span className="msc-price">$16</span>
@@ -120,21 +100,14 @@ const HomeScreen = () => {
               </button>
             </div>
             <div className="msc-photo-wrap">
-              <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=320&auto=format&fit=crop&q=80" 
-                alt="Stella Fernandez" 
-                className="msc-photo orange-sweater" 
-              />
+              <Avatar name="Stella Fernandez" size={95} shape="rounded" />
             </div>
           </div>
 
           {/* Mentor Card 2: Andrew Garfield */}
           <div className="mentor-showcase-card">
             <div className="msc-details">
-              <div className="field-tag-badge">
-                <BarChart3 size={11} className="field-icon" />
-                <span>Investing</span>
-              </div>
+              <Pill variant="field" icon={<BarChart3 size={11} />}>Investing</Pill>
               <h4 className="msc-name">Andrew<br />Garfield</h4>
               <div className="msc-price-row">
                 <span className="msc-price">$20</span>
@@ -145,11 +118,7 @@ const HomeScreen = () => {
               </button>
             </div>
             <div className="msc-photo-wrap">
-              <img 
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=320&auto=format&fit=crop&q=80" 
-                alt="Andrew Garfield" 
-                className="msc-photo blue-attire" 
-              />
+              <Avatar name="Andrew Garfield" size={95} shape="rounded" />
             </div>
           </div>
         </div>
@@ -157,7 +126,7 @@ const HomeScreen = () => {
 
       {/* 7. Bottom Tab Navigation */}
       <nav className="home-bottom-nav">
-        <button 
+        <button
           className={`nav-tab-btn ${activeTab === 'Home' ? 'active' : ''}`}
           onClick={() => setActiveTab('Home')}
         >
@@ -165,7 +134,7 @@ const HomeScreen = () => {
           <span>Home</span>
         </button>
 
-        <button 
+        <button
           className={`nav-tab-btn ${activeTab === 'Search' ? 'active' : ''}`}
           onClick={() => setActiveTab('Search')}
         >
@@ -173,7 +142,7 @@ const HomeScreen = () => {
           <span>Search</span>
         </button>
 
-        <button 
+        <button
           className={`nav-tab-btn ${activeTab === 'Schedule' ? 'active' : ''}`}
           onClick={() => setActiveTab('Schedule')}
         >
@@ -181,7 +150,7 @@ const HomeScreen = () => {
           <span>Schedule</span>
         </button>
 
-        <button 
+        <button
           className={`nav-tab-btn ${activeTab === 'Chat' ? 'active' : ''}`}
           onClick={() => setActiveTab('Chat')}
         >
@@ -189,15 +158,11 @@ const HomeScreen = () => {
           <span>Chat</span>
         </button>
 
-        <button 
+        <button
           className={`nav-tab-btn ${activeTab === 'Profile' ? 'active' : ''}`}
           onClick={() => setActiveTab('Profile')}
         >
-          <img 
-            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&auto=format&fit=crop&q=80" 
-            alt="Profile" 
-            className="nav-avatar-icon" 
-          />
+          <User size={20} />
           <span>Profile</span>
         </button>
       </nav>

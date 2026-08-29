@@ -27,31 +27,6 @@
   gap: 12px;
 }
 
-.md-avatar-wrap {
-  position: relative;
-  width: 42px;
-  height: 42px;
-}
-
-.md-avatar {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #6366F1;
-}
-
-.md-online-dot {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #10B981;
-  border: 2px solid #FFFFFF;
-}
-
 .md-greeting {
   font-size: 11px;
   color: #64748B;
@@ -127,34 +102,6 @@
   margin-bottom: 14px;
 }
 
-.md-uc-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(239, 68, 68, 0.2);
-  color: #FCA5A5;
-  border: 1px solid rgba(239, 68, 68, 0.4);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  padding: 3px 8px;
-  border-radius: 99px;
-}
-
-.live-pulse {
-  width: 6px;
-  height: 6px;
-  background: #EF4444;
-  border-radius: 50%;
-  animation: pulse-red 1.5s infinite;
-}
-
-@keyframes pulse-red {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
-}
-
 .md-uc-date {
   font-size: 11px;
   color: rgba(255, 255, 255, 0.8);
@@ -166,14 +113,6 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
-}
-
-.md-mentor-photo {
-  width: 48px;
-  height: 48px;
-  border-radius: 16px;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .md-mentor-info h4 {
@@ -238,71 +177,12 @@
   cursor: pointer;
 }
 
-/* Stats Row */
-.md-stats-row {
-  background: #FFFFFF;
-  border-radius: 20px;
-  padding: 14px 16px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid #E2E8F0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-.md-stat-card {
-  text-align: center;
-}
-
-.md-stat-num {
-  font-family: var(--font-heading);
-  font-size: 20px;
-  font-weight: 800;
-  color: #0F172A;
-}
-
-.md-stat-num.highlight {
-  color: #6366F1;
-}
-
-.md-stat-label {
-  font-size: 10px;
-  font-weight: 600;
-  color: #64748B;
-}
-
-.md-stat-divider {
-  width: 1px;
-  height: 28px;
-  background: #E2E8F0;
-}
-
 /* Category Pills */
 .md-categories-scroll {
   display: flex;
   gap: 8px;
   overflow-x: auto;
   padding-bottom: 2px;
-}
-
-.md-category-pill {
-  padding: 8px 16px;
-  border-radius: 99px;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  font-size: 12px;
-  font-weight: 600;
-  color: #475569;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-}
-
-.md-category-pill.active {
-  background: #6366F1;
-  color: #FFFFFF;
-  border-color: #6366F1;
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
 /* Section Header */
@@ -328,7 +208,7 @@
 .md-view-all {
   background: none;
   border: none;
-  color: #6366F1;
+  color: var(--primary-500);
   font-size: 12px;
   font-weight: 700;
   display: flex;
@@ -360,13 +240,6 @@
   gap: 12px;
 }
 
-.md-cm-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  object-fit: cover;
-}
-
 .md-cm-details {
   flex: 1;
 }
@@ -384,15 +257,6 @@
   color: #0F172A;
 }
 
-.md-rating-chip {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 11px;
-  font-weight: 700;
-  color: #B45309;
-}
-
 .md-cm-title {
   font-size: 11px;
   color: #64748B;
@@ -402,15 +266,6 @@
 .md-cm-tags {
   display: flex;
   gap: 6px;
-}
-
-.md-cm-tags .tag {
-  font-size: 10px;
-  font-weight: 600;
-  background: #EEF2FF;
-  color: #4F46E5;
-  padding: 2px 8px;
-  border-radius: 6px;
 }
 
 .md-cm-bottom {
@@ -427,7 +282,7 @@
   gap: 6px;
   font-size: 11px;
   font-weight: 700;
-  color: #4F46E5;
+  color: var(--primary-600);
 }
 
 .md-cm-action {
@@ -450,7 +305,7 @@
 }
 
 .md-cm-book-btn {
-  background: #6366F1;
+  background: var(--primary-500);
   color: #FFFFFF;
   font-size: 12px;
   font-weight: 700;
@@ -462,7 +317,7 @@
 }
 
 .md-cm-book-btn:hover {
-  background: #4F46E5;
+  background: var(--primary-600);
 }
 
 /* Bottom Nav Bar */
@@ -496,5 +351,5 @@
 }
 
 .nav-item.active {
-  color: #6366F1;
+  color: var(--primary-500);
 }

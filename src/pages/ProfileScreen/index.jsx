@@ -1,5 +1,8 @@
 import React from 'react';
-import { User, Sparkles, Bookmark, CreditCard, Bell, Shield, ChevronRight, LogOut, Home, Search, Calendar, MessageSquare, Award } from 'lucide-react';
+import { Sparkles, Bookmark, CreditCard, Bell, ChevronRight, LogOut, Home, Search, Calendar, MessageSquare, User, Award, Zap } from 'lucide-react';
+import Avatar from '../../components/Avatar';
+import Pill from '../../components/Pill';
+import StatRow from '../../components/StatRow';
 import './styles.css';
 
 const ProfileScreen = () => {
@@ -8,46 +11,33 @@ const ProfileScreen = () => {
       {/* 1. Profile Header */}
       <div className="prof-header">
         <div className="prof-avatar-wrap">
-          <img 
-            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=160&auto=format&fit=crop&q=80" 
-            alt="Sakura Hime" 
-            className="prof-avatar" 
-          />
+          <Avatar name="Sakura Hime" size={64} shape="circle" />
           <div className="prof-pro-badge">PRO</div>
         </div>
 
         <h3 className="prof-name">Sakura Hime</h3>
         <p className="prof-email">sakura.hime@example.com</p>
 
-        <div className="prof-goal-pill">
-          <Sparkles size={12} color="#1D75FE" />
-          <span>Goal: Growth Marketing Lead</span>
-        </div>
+        <Pill variant="field" icon={<Sparkles size={12} />}>Goal: Growth Marketing Lead</Pill>
       </div>
 
       <div className="prof-scroll-body no-scrollbar">
         {/* 2. Stat Counts */}
-        <div className="prof-stats-grid">
-          <div className="prof-stat-box">
-            <span className="prof-stat-num">8</span>
-            <span className="prof-stat-lbl">Sessions</span>
-          </div>
-          <div className="prof-stat-sep"></div>
-          <div className="prof-stat-box">
-            <span className="prof-stat-num">4</span>
-            <span className="prof-stat-lbl">Mentors</span>
-          </div>
-          <div className="prof-stat-sep"></div>
-          <div className="prof-stat-box">
-            <span className="prof-stat-num">65%</span>
-            <span className="prof-stat-lbl">Goal Done</span>
-          </div>
-        </div>
+        <StatRow
+          layout="divided"
+          items={[
+            { value: '8', label: 'Sessions' },
+            { value: '4', label: 'Mentors' },
+            { value: '65%', label: 'Goal Done' },
+          ]}
+        />
 
         {/* 3. Pro Status Banner */}
         <div className="prof-pro-card">
           <div className="prof-pc-left">
-            <div className="prof-pc-icon">🚀</div>
+            <div className="prof-pc-icon">
+              <Zap size={18} color="#FFFFFF" />
+            </div>
             <div>
               <span className="prof-pc-title">Mentora Pro Active</span>
               <span className="prof-pc-sub">Priority booking & discounts enabled</span>
@@ -128,11 +118,7 @@ const ProfileScreen = () => {
           <span>Chat</span>
         </button>
         <button className="nav-tab-btn active">
-          <img 
-            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&auto=format&fit=crop&q=80" 
-            alt="Profile" 
-            className="nav-avatar-icon" 
-          />
+          <User size={20} />
           <span>Profile</span>
         </button>
       </nav>

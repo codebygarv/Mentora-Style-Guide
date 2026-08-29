@@ -18,7 +18,6 @@ const DocHeader = () => {
           <a href="#hero-section" className="doc-brandmark">
             <MentoraLogo size={28} />
             <span className="doc-brand-name">Mentora</span>
-            <span className="doc-badge">v1.0</span>
           </a>
 
           <nav className="doc-nav">
@@ -46,10 +45,6 @@ const DocHeader = () => {
 
       <header className="doc-hero">
         <div className="doc-wrap">
-          <div className="doc-pill-tag">
-            <Sparkles size={14} />
-            <span>Connect. Learn. Grow.</span>
-          </div>
           <h1 className="doc-hero-title">
             Mentora App<br />Interactive Design System
           </h1>

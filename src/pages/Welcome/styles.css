@@ -29,22 +29,16 @@
   background: linear-gradient(to top, #FFFFFF 0%, rgba(255, 255, 255, 0) 60%);
 }
 
-.welcome-badge-float {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
-  border: 1px solid #EDF2F7;
-  padding: 6px 14px;
-  border-radius: 9999px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 11px;
-  font-weight: 700;
+.welcome-stat-line {
+  font-size: 12px;
+  color: #64748B;
+  margin-bottom: 18px;
+}
+
+.welcome-stat-line strong {
+  font-family: var(--font-heading);
+  font-weight: 800;
   color: #0F172A;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .welcome-content {
