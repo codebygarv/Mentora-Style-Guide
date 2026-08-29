@@ -1,4 +1,5 @@
 import React from 'react';
+import MentoraLogo from '../components/MentoraLogo';
 import HomeScreen from '../pages/HomeScreen';
 import MentorProfile from '../pages/MentorProfile';
 import { Sparkles, Star, ShieldCheck, Video, ArrowRight, Layers, Clock, Zap } from 'lucide-react';
@@ -24,7 +25,7 @@ const HeroSection = () => {
         {/* Left Column: Clear High-Contrast Typography & Metrics */}
         <div className="hero-copy-column">
           <div className="hero-badge-pill">
-            <Sparkles size={14} className="hero-badge-icon" />
+            <MentoraLogo size={16} />
             <span>MENTORA APP DESIGN SYSTEM v1.0</span>
           </div>
 

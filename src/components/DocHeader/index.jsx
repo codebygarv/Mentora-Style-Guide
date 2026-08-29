@@ -1,4 +1,5 @@
 import React from 'react';
+import MentoraLogo from '../MentoraLogo';
 import { Sparkles, Layers, ShieldCheck, Compass, Video } from 'lucide-react';
 import './styles.css';
 
@@ -15,11 +16,9 @@ const DocHeader = () => {
       <div className="doc-top">
         <div className="doc-in">
           <a href="#hero-section" className="doc-brandmark">
-            <span className="doc-brand-icon">
-              <Sparkles size={18} />
-            </span>
+            <MentoraLogo size={28} />
             <span className="doc-brand-name">Mentora</span>
-            <span className="doc-badge">Design System v1.0</span>
+            <span className="doc-badge">v1.0</span>
           </a>
 
           <nav className="doc-nav">
