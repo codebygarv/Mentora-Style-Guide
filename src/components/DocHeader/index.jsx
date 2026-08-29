@@ -24,10 +24,11 @@ const DocHeader = () => {
 
           <nav className="doc-nav">
             <a href="#hero-section">Overview</a>
-            <a href="#section-01">Design Tokens</a>
+            <a href="#section-01">Tokens</a>
             <a href="#section-02">Auth & Onboarding</a>
             <a href="#section-03">Mentee Discovery</a>
-            <a href="#section-04">Live & Mentor Tools</a>
+            <a href="#section-04">Live Mentorship</a>
+            <a href="#section-05">Tab Navigation</a>
           </nav>
 
           <a 
