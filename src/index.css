@@ -6,23 +6,19 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: #0B0F19;
+  border-bottom: 1px solid rgba(29, 117, 254, 0.1);
+  background: radial-gradient(circle at 50% 0%, #DCEBFE 0%, #EDF4FD 40%, #F5F9FF 100%);
+  color: #0F172A;
 }
 
 .presentation-canvas.bg-alt {
-  background: #0F172A;
+  background: radial-gradient(circle at 50% 0%, #E2EFFE 0%, #EEF5FD 50%, #F8FAFC 100%);
 }
 
-.presentation-canvas.bg-light {
-  background: #F8FAFC;
-  color: #0F172A;
-}
-
-.presentation-canvas.bg-light h1,
-.presentation-canvas.bg-light h4,
-.presentation-canvas.bg-light p {
-  color: #0F172A;
+.presentation-canvas.bg-dark {
+  background: #0B0F19;
+  color: #FFFFFF;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
 .presentation-text {
@@ -37,23 +33,31 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--primary-400);
+  color: var(--primary-500);
   margin-bottom: 12px;
 }
 
 .presentation-text h1 {
   font-family: var(--font-heading);
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #FFFFFF;
+  color: #0F172A;
   margin-bottom: 14px;
+}
+
+.presentation-canvas.bg-dark .presentation-text h1 {
+  color: #FFFFFF;
 }
 
 .presentation-text p {
   font-size: 16px;
-  color: var(--slate-400);
+  color: #64748B;
   line-height: 1.6;
+}
+
+.presentation-canvas.bg-dark .presentation-text p {
+  color: #94A3B8;
 }
 
 /* Device Showcase Rows */
@@ -77,27 +81,27 @@
 
 .screen-info {
   text-align: center;
-  max-width: 320px;
+  max-width: 330px;
 }
 
 .screen-title {
   font-family: var(--font-heading);
   font-size: 18px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #0F172A;
   margin-bottom: 6px;
 }
 
-.presentation-canvas.bg-light .screen-title {
-  color: #0F172A;
+.presentation-canvas.bg-dark .screen-title {
+  color: #FFFFFF;
 }
 
 .screen-desc {
   font-size: 13px;
   line-height: 1.5;
-  color: var(--slate-400);
+  color: #64748B;
 }
 
-.presentation-canvas.bg-light .screen-desc {
-  color: var(--slate-600);
+.presentation-canvas.bg-dark .screen-desc {
+  color: #94A3B8;
 }
